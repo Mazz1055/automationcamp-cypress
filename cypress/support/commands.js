@@ -26,7 +26,7 @@
 
 import 'cypress-file-upload';
 Cypress.Commands.add('Order',()=>{
-    cy.visit("http://psa-staging.snappfood.ir/restaurant/pv1l4d")
+    cy.visit("http://psa.snappfood.ir/restaurant/pv1l4d")
      cy.get('#submitLocation').click()
     cy.get('#productId_7887571').children(7).contains("افزودن").dblclick({force:true})
     cy.contains("تکمیل خرید").click({force:true})
@@ -58,7 +58,7 @@ Cypress.Commands.add('Login',()=>{
 })
 
 Cypress.Commands.add('Order2',()=>{
-    cy.visit("https://psa-staging.snappfood.ir/restaurant/pv1l4d")
+    cy.visit("https://psa.snappfood.ir/restaurant/pv1l4d")
         cy.get('#submitLocation').click()
     cy.get('#productId_7887571').children(7).contains("افزودن").click({force:true}).wait(500)
     cy.get('#plus-button > svg > g > [fill="#D8D8D8"]').dblclick({force:true})
