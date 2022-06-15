@@ -80,4 +80,8 @@ Cypress.Commands.add('Order2',()=>{
     cy.contains('صفحه اصلی').click({force:true})
 
 })
+Cypress.Commands.add('uploadPhoto',function(){
+    const filepath='testPhoto.jpg'
+        cy.get('input[type="file"]').attachFile(filepath)
+})
 

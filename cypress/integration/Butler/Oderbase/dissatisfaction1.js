@@ -15,8 +15,7 @@ it('uploadPhoto',()=>{
     cy.get('#product-issue-0').click()
     cy.contains('تاریخ انقضا').click()
     cy.contains('ادامه').click()
-    const filepath='testPhoto.jpg'
-    cy.get('input[type="file"]').attachFile(filepath).then((photoassertion)=>{
+    cy.uploadPhoto().then((photoassertion)=>{
         cy.get('#photo-upload').find('img').should('have.attr','alt','تصویر')
        })
     cy.contains('ادامه').should('be.disabled')
